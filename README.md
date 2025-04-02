@@ -16,7 +16,7 @@ The **Efficiently Serving LLMs** course, offered by [DeepLearning.AI](https://ww
 
 ## Course Content
 
-### [**1. Text Generation**]()
+### [**1. Text Generation**](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L1-Text_Generation.ipynb)
 - **Encoder vs Decoder LLMs** and autoregressive text generation.
 - **KV Cache Prefill & Decode**: Using cached key-value tensors to optimize token generation.
 - **Notebook Implementation**:
@@ -24,42 +24,42 @@ The **Efficiently Serving LLMs** course, offered by [DeepLearning.AI](https://ww
   - Implement **token generation**, **top-k sampling**, and **performance measurement**.
   - Optimize using **KV-caching** and compare execution times.
 
-### [**2. Batching for Efficient Inference**]()
+### [**2. Batching for Efficient Inference**](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L2-Batching.ipynb)
 - **Single vs. Multi-Request Generation** and their trade-offs.
 - **Throughput vs. Latency** analysis with and without batching.
 - **Notebook Implementation**:
   - Implement **batch token generation** with padding and position IDs.
   - Compare performance across different batch sizes.
 
-### [**3. Continuous Batching**]()
+### [**3. Continuous Batching**](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L3-Continuous_Batching.ipynb)
 - Improves efficiency by dynamically swapping completed requests with new ones.
 - **Notebook Implementation**:
   - Implements **request queue processing** for continuous batching.
   - Uses `generate_next_token()`, `merge_batches()`, and `filter_batch()` for dynamic management.
   - Measures performance differences compared to traditional batching.
 
-### [**4. Quantization**]()
+### [**4. Quantization**](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L4-Quantization.ipynb)
 - Reduces model memory usage while maintaining accuracy.
 - **Notebook Implementation**:
   - Apply **zero-point quantization** to GPT-2 model parameters.
   - Implement functions for **quantization and dequantization**.
   - Compare **memory footprints** before and after quantization.
 
-### [**5. Low-Rank Adaptation (LoRA)**]()
+### [**5. Low-Rank Adaptation (LoRA)**](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L5-Low-Rank_Adaptation.ipynb)
 - Efficient fine-tuning technique that reduces the number of trainable parameters.
 - **Notebook Implementation**:
   - Define **LoRA matrices (A & B)** and integrate them into a model.
   - Implement **LoraLayer** in PyTorch to modify linear layers.
   - Compare results with and without LoRA applied.
 
-### [**6. Multi-LoRA Inference**]()
+### [**6. Multi-LoRA Inference**](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L6-Multi-LoRA.ipynb)
 - Serving multiple LoRA models efficiently in a single deployment.
 - **Notebook Implementation**:
   - Implement **loop-based vs. vectorized LoRA computation**.
   - Optimize with `torch.index_select()` for efficient inference.
   - Compare performance benchmarks for different LoRA implementations.
 
-### [**7. LoRAX: Efficient LLM Serving**]()
+### [**7. LoRAX: Efficient LLM Serving**](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/predibase_lorax.ipynb)
 - Framework that combines **continuous batching, quantization, and multi-LoRA inference**.
 - **Notebook Implementation**:
   - Implement LoRAX techniques to scale LLM deployments.
@@ -68,13 +68,13 @@ The **Efficiently Serving LLMs** course, offered by [DeepLearning.AI](https://ww
 
 ## Notebooks
 The course includes Jupyter Notebooks that provide hands-on implementations of all optimization techniques:
-- [`L1-Text_Generation.ipynb`]() – Covers text generation fundamentals.
-- [`L2-Batching.ipynb`]() – Implements efficient batching strategies.
-- [`L3-Continuous_Batching.ipynb`]() – Demonstrates dynamic request processing.
-- [`L4-Quantization.ipynb`]() – Applies quantization to reduce memory usage.
-- [`L5-Low-Rand_Adaptation.ipynb`]() – Implements Low-Rank Adaptation for fine-tuning.
-- [`L6-Multi-Lora.ipynb`]() – Optimizes LoRA for multi-model inference.
-- [`prediabse_lorax.ipynb`]() – Integrates all optimizations into a scalable LLM serving framework.
+- [`L1-Text_Generation.ipynb`](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L1-Text_Generation.ipynb) – Covers text generation fundamentals.
+- [`L2-Batching.ipynb`](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L2-Batching.ipynb) – Implements efficient batching strategies.
+- [`L3-Continuous_Batching.ipynb`](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L3-Continuous_Batching.ipynb) – Demonstrates dynamic request processing.
+- [`L4-Quantization.ipynb`](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L4-Quantization.ipynb) – Applies quantization to reduce memory usage.
+- [`L5-Low-Rand_Adaptation.ipynb`](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L5-Low-Rank_Adaptation.ipynb) – Implements Low-Rank Adaptation for fine-tuning.
+- [`L6-Multi-Lora.ipynb`](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/L6-Multi-LoRA.ipynb) – Optimizes LoRA for multi-model inference.
+- [`prediabse_lorax.ipynb`](https://github.com/michaWorku/Efficiently-Serving-LLMs/blob/main/predibase_lorax.ipynb) – Integrates all optimizations into a scalable LLM serving framework.
 
 
 ## Getting Started
